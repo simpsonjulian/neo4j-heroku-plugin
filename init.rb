@@ -2,6 +2,7 @@ module Heroku::Command
   class Neo4j < BaseWithApp
     def backup
       puts ENV.inspect
+    end
   end
 end
 
