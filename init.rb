@@ -1,7 +1,11 @@
 module Heroku::Command
   class Neo4j < BaseWithApp
     def backup
-      puts ENV.inspect
+       ENV.each_pair do |key, value|
+         puts "#{key}: #{value}"
+       end
+       puts '---'
+       puts heroku.config_vars(app)
     end
   end
 end
